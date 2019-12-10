@@ -30,8 +30,8 @@ const predictionClient = new automl.PredictionServiceClient();
 // Firebase libraries
 const functions = require('firebase-functions');
 const admin = require('firebase-admin');
-const db = admin.firestore();
 admin.initializeApp(functions.config().firebase);
+const db = admin.firestore();
 
 function resizeImg(filepath) {
     return new Promise((resolve, reject) => {
